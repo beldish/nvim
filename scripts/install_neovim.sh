@@ -4,11 +4,12 @@ red='\\e\[0;31m'
 green='\\e\[0;32m'
 # Introduction to the setup script
 echo -e "Setup neovim...\n"
+mkdir -p ./tmp
 cd ./tmp
-sudo rm -rf neovimi
+sudo rm -rf neovim
 git clone https://github.com/neovim/neovim
 cd ./neovim
 sudo make CMAKE\_BUILD\_TYPE=Release install
-cd ../tmp
+cd ..
 sudo rm -rf neovim
 #git clone https://github.com/username/your-nvim](https://github.com/username/your-nvim) config.git \~/.config/nvim
